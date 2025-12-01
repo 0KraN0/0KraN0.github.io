@@ -1,0 +1,143 @@
+.author-profile {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.author-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.author-avatar-large img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+
+.author-basic-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.author-dates {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.author-tagline {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.author-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.author-bio, .author-works, .poems-by-author, .author-facts {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.author-bio h2, .author-works h2, .poems-by-author h2, .author-facts h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.author-bio p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.works-list, .poems-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.work-item, .poem-item {
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.poem-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.poem-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.work-item h4, .poem-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.work-item p, .poem-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.author-facts ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.author-facts li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.author-facts li:before {
+    content: "✦";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.author-facts li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .author-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .author-basic-info h1 {
+        font-size: 2rem;
+    }
+    
+    .author-bio, .author-works, .poems-by-author, .author-facts {
+        padding: 1.5rem;
+    }
+}
